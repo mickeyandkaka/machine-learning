@@ -1,6 +1,7 @@
 machine-learning
 ================
-My answer about machine-learning course on Couresa.
+This is my answer about machine-learning course on Couresa.
 
 Under MIT license. 
-Use on your own risk. 
+
+Use it on your own risk. 
