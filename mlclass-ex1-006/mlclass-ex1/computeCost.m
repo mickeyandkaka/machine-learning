@@ -13,12 +13,15 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-X = [ones(m, 1), data(:,1)];
-theta = zeros(2, 1);
+% X = [ones(m, 1), data(:,1)];
+% theta = zeros(2, 1);
 
-iterations = 1500;
-alpha = 0.01;
+% iterations = 1500;
+% alpha = 0.01;
 
+for i = 1:m,
+	J += 1 / (2*m) * (theta' * X(i, : )' - y(i) ) ** 2;
+end
 
 
 % =========================================================================
