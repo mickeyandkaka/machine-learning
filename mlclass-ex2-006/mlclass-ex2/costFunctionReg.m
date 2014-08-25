@@ -19,7 +19,20 @@ grad = zeros(size(theta));
 
 
 
+H_theta_x = sigmoid(X * theta);
 
+delta = 0;
+for i = 2:size(theta)
+	delta += theta(i, 1) * theta(i, 1);
+end 
+
+J = (1.0/m) * sum(-y .* log(H_theta_x) - (1.0 - y) .* log(1.0 - H_theta_x)) + lambda/(2.0 * m) * delta;
+
+
+delta = (lambda/m) .* theta;
+delta(1, 1) = 0;
+
+grad = (1.0/m) .* X' * (H_theta_x - y)  + delta;
 
 
 % =============================================================
